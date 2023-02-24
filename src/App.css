@@ -1,7 +1,61 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+}
+/*Background image{
+  background-image: url(/src/img2.jpg);
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  min-width: 100%;
+  min-height: 100%;
+   background-blend-mode: multiply;
+  background-color: grey;
+*/
+.searchimg {
+  position: relative;
+  margin: auto;
+  max-width: 100%;
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.whybox {
+  width: 100%;
+  text-align: center;
+  background-color: orange;
+  margin: auto;
+}
+/*
+ left: 10px;
+  right: 10px;
+  bottom: 0;
+  top: 0;
+*/
+.reasonsgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  grid-gap: 40px;
+}
+.whytext {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
+form {
+  color: #f2f2f2;
+  position: absolute;
+  margin-top: 30px;
+  padding-top: 30px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -37,5 +91,21 @@
   }
 }
 nav {
-  background-color: blue;
+  background-color: pink;
+  display: flex;
+  gap: 5px;
+  justify-content: space-evenly;
+}
+
+nav button {
+  height: 50px;
+  text-align: centre;
+  border: 0px;
+  background: 0px;
+  margin-top: 10px;
+  width: 250px;
+}
+
+nav button:hover {
+  background-color: #ffbe0b;
 }

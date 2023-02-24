@@ -1,108 +1,136 @@
 import React, { useState } from "react";
 import "./App.css";
 import Result from "./components/Result";
-//import Featured from "./components/Featured";
+import Featured from "./components/Featured";
 import { Routes, Route, Link } from "react-router-dom";
-//import image from "./img.jpg";
+import { useEffect, createContext } from "react";
+import Form from "./components/Form";
+import { Button } from "react-bootstrap";
+import sorry from "./sorry.png";
 
 function App() {
-  //const [type, setType] = useState("");
-  //const [location, setLocation] = useState("");
-  const [form, setForm] = useState({
-    type: "",
-    location: "",
-  });
+  const [error, setError] = useState("");
+  const [results, setResults] = useState([]);
+  const [token, setToken] = useState(null);
+  const OAUTH_URL = "https://api.petfinder.com/v2/oauth2/token";
+  const PETFINDER_URL = `/v2/animals`;
+  //const CLIENT_ID = "HXrybFRPtRK41Nieti4Kj8t0Nzq2eD0zS5IUfSFbcqwMXE9qPC";
+  //const CLIENT_SECRET = "CYTIwKHusDjEZyhlPDPsZLo7fHXrcCGBV9uw1ub6";
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    getToken();
+  }, []);
 
-  const EMPTY_FORM = {
-    type: "",
-    location: "",
-  };
+  // Get token from petfinder.com and save in state
+  async function getToken() {
+    //console.log(process.env.REACT_APP_CLIENT_ID);
+    let credentials = {
+      grant_type: "client_credentials",
+      client_id: process.env.REACT_APP_CLIENT_ID,
+      client_secret: process.env.REACT_APP_CLIENT_SECRET,
+    };
+    // add process.env.  before CLIENT ID to reach env folder
 
-  const PETFINDER_URL = `https://api.petfinder.com/v2/oauth2/token`;
-  const petFinderKey = "HXrybFRPtRK41Nieti4Kj8t0Nzq2eD0zS5IUfSFbcqwMXE9qPC";
-  const petFinderSecret = "CYTIwKHusDjEZyhlPDPsZLo7fHXrcCGBV9uw1ub6";
+    let options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(credentials),
+    };
 
-  const handleChange = (e) => {
-    //setLocation(e.target.value);
-    //setForm(e.target.value);
-    //console.log(location, type);
-    const type = e.target.name;
-    const value = e.target.value;
+    let response = await fetch(OAUTH_URL, options);
+    if (response.ok) {
+      let data = await response.json();
+      //console.log("response: Token etc", data);
+      setToken(data.access_token);
+    } else {
+      console.log(
+        `Error in getToken(): ${response.status}: ${response.statusText}`
+      );
+    }
+  }
 
-    let newForm = { ...form };
-    newForm[type] = value;
+  async function printPets(form) {
+    let options = {
+      headers: { Authorization: `Bearer ${token}` },
+    };
+    setLoading(true);
+    setError("");
 
-    setForm((form) => ({
-      ...form,
-      [e.target.name]: value,
-    }));
-  };
+    //console.log(PET_TYPE);
+    const PET_TYPE = `/v2/animals?type=${form.type}`;
+    let response = await fetch(PET_TYPE, options);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form button submitted");
-    //let { location, type } =
-    //setLocation("");,
+    //changed to PET_TYPE from PET URL
+    if (response.ok) {
+      let data = await response.json();
+      //console.log("response:all pets", data.animals);
+      setResults(data.animals);
 
-    setForm(EMPTY_FORM);
-  };
+      // for (let pet of data.animals) {
+      //   console.log(pet.name, pet.breeds, pet.age, pet.gender, pet.type);
+      // }
+    } else {
+      setError(
+        `No ${form.type} found. ${response.status}: ${response.statusText}`
+      );
+    }
+    setLoading(false);
+  }
 
-  /*
-  name="firstName"
-          value={state.firstName}
-          onChange={handleChange}
-  */
   return (
     <div className="App">
+      {/*       
+      <Result>
+        <Featured />
+      </Result> */}
+
       <nav>
         <h1>Petfinder</h1>
+
+        <button>About us</button>
+        <button>Pet Care</button>
+        <button>Ways to support</button>
+        <button>Contact us</button>
       </nav>
 
       <section className="home">
-        <form onSubmit={handleSubmit}>
-          <label>
-            <select>
-              <option value={form.type} onChange={(e) => handleChange(e)}>
-                Dog
-              </option>
-              <option value={form.type} onChange={(e) => handleChange(e)}>
-                Cat
-              </option>
-              <option value={form.type} onChange={(e) => handleChange(e)}>
-                Rabbit
-              </option>
-              <option value={form.type} onChange={(e) => handleChange(e)}>
-                Pig
-              </option>
-            </select>
-            <input
-              type="text"
-              placeholder="Location"
-              value={form.location}
-              onChange={(e) => handleChange(e)}
+        <div>
+          <Routes>
+            <Route path="/" element={<Form printPets={printPets} />} />
+            <Route path="/Result/*" element={<Result results={results} />} />
+            <Route
+              path="/Featured/:id"
+              element={<Featured results={results} />}
+            ></Route>
+          </Routes>
+          {loading && (
+            <div className="spinner-border text-warning" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
+          )}
+
+          {error && (
+            <img
+              src={sorry}
+              style={{
+                height: 400,
+                width: 500,
+              }}
             />
-          </label>
-
-          <button type="submit" value="Search">
-            Search
-          </button>
-        </form>
+          )}
+        </div>
       </section>
-
-      <div>
-        <Routes>
-          <Route path="/" element={<Result />} />
-        </Routes>
-      </div>
     </div>
   );
 }
 
-//Result page only visible after clicking button search
+/*
 
+<h2 style={{ color: "red" }}>
+*/
 export default App;
-/* <Route path="/users" element={<Featured />} />
-<nav>
-        <Link to="/">All</Link> |<Link to="/users">Users</Link>
-      </nav>
- */
+/*
+  {/* <Route
+              path="/Result/Featured/:id"
+              element={<Featured showPet={showPet} featProject={featProject} />}
+            /> */
