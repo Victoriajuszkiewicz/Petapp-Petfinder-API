@@ -7,6 +7,7 @@ import { useEffect, createContext } from "react";
 import Form from "./components/Form";
 import { Button } from "react-bootstrap";
 import sorry from "./sorry.png";
+import logo from "./logo.png";
 
 function App() {
   const [error, setError] = useState("");
@@ -78,21 +79,20 @@ function App() {
   }
 
   return (
+    //* Nav Bar
     <div className="App">
-      {/*       
-      <Result>
-        <Featured />
-      </Result> */}
+      <section>
+        <div>
+          <nav>
+            <img src={logo} alt="this is a logo" />
 
-      <nav>
-        <h1>Petfinder</h1>
-
-        <button>About us</button>
-        <button>Pet Care</button>
-        <button>Ways to support</button>
-        <button>Contact us</button>
-      </nav>
-
+            <button>About us</button>
+            <button>Pet Care</button>
+            <button>Ways to support</button>
+            <button>Contact us</button>
+          </nav>
+        </div>
+      </section>
       <section className="home">
         <div>
           <Routes>
@@ -104,20 +104,12 @@ function App() {
             ></Route>
           </Routes>
           {loading && (
-            <div className="spinner-border text-warning" role="status">
+            <div className="spinner-border text-dark" role="status">
               <span className="visually-hidden">Loading...</span>
             </div>
           )}
 
-          {error && (
-            <img
-              src={sorry}
-              style={{
-                height: 400,
-                width: 500,
-              }}
-            />
-          )}
+          {error && <div className="bcg-sorry" />}
         </div>
       </section>
     </div>
@@ -125,6 +117,11 @@ function App() {
 }
 
 /*
+    src={sorry}
+              style={{
+                height: 400,
+                width: 500,
+              }}
 
 <h2 style={{ color: "red" }}>
 */

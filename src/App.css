@@ -2,16 +2,7 @@
   text-align: center;
   box-sizing: border-box;
 }
-/*Background image{
-  background-image: url(/src/img2.jpg);
-  position: fixed;
-  background-size: cover;
-  background-position: center;
-  min-width: 100%;
-  min-height: 100%;
-   background-blend-mode: multiply;
-  background-color: grey;
-*/
+
 .searchimg {
   position: relative;
   margin: auto;
@@ -21,11 +12,18 @@
   padding-bottom: 0;
   width: 100%;
 }
-.whybox {
-  width: 100%;
-  text-align: center;
-  background-color: orange;
-  margin: auto;
+
+.home {
+  background-color: #ffad10;
+}
+.bcg-sorry {
+  background-image: url(/src/sorry.png);
+  position: fixed;
+  background-size: cover;
+  background-position: center;
+  min-width: 100%;
+  min-height: 100%;
+  background-blend-mode: multiply;
 }
 /*
  left: 10px;
@@ -40,14 +38,6 @@
   padding-left: 40px;
   padding-right: 40px;
   grid-gap: 40px;
-}
-.whytext {
-  font-size: 25px;
-  font-weight: bold;
-  margin: 0px;
-  padding-top: 20px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
 }
 
 form {
@@ -90,8 +80,9 @@ form {
     transform: rotate(360deg);
   }
 }
+
 nav {
-  background-color: pink;
+  background-color: white;
   display: flex;
   gap: 5px;
   justify-content: space-evenly;
@@ -107,5 +98,11 @@ nav button {
 }
 
 nav button:hover {
-  background-color: #ffbe0b;
+  background-color: #ffad10;
+}
+nav img {
+  width: 60px;
+  height: 60px;
+  padding-top: 5px;
+  margin-top: 5px;
 }

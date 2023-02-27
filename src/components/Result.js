@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import icon from "../icon2.png";
 import { Routes, Route, Link } from "react-router-dom";
 import Featured from "./Featured.js";
+import "./Result.css";
 
 export default function Result(props) {
   const [featProject, setFeatured] = useState({});
@@ -16,64 +17,37 @@ export default function Result(props) {
     console.log(featProj);
     setFeatured(featProj);
   }
-  //console.log(featProject);
+
   return (
-    <div>
-      {/* <Featured showPet={showPet} featProject={featProject} /> */}
-      {/* <Routes> */}
-      {/* <Route
-          path="/Result/Featured"
-          element={<Featured showPet={showPet} featProject={featProject} />}
-        /> */}
-      {/* </Routes> */}
-      <h2 className="h2">Available furbabes</h2>
-      <div className="card-group">
-        <div className="card" style={{ width: "18rem" }}>
-          {props.results.length && (
-            <div>
-              <ul>
-                {props.results.map((e) => (
-                  <div>
-                    <div>
-                      {e.photos[0] ? (
-                        // <img
-                        //   src={e.photos[0] && e.photos[0].small}
-                        //   key={e.id}
-                        //   onClick={(o) => showPet(e.id)}
-                        // />
-                        <Link to={"/Featured/" + e.id}>
-                          <img
-                            style={{
-                              height: 200,
-                              width: 200,
-                            }}
-                            className="card-img-top"
-                            src={e.photos[0] && e.photos[0].medium}
-                          />
-                        </Link>
-                      ) : (
-                        <Link to={"/Featured/" + e.id}>
-                          <img
-                            className="card-img-top"
-                            src={icon}
-                            style={{
-                              height: 200,
-                              width: 200,
-                            }}
-                          />
-                        </Link>
-                      )}
-                    </div>
-                    <div className="card-body">
-                      <h3 className="card-title">{e.name}</h3>
-                      <h6 className="card-text">{e.breeds.primary}</h6>
-                    </div>
-                  </div>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
+    <div className="resultsall">
+      <h3 className="avil">Available furbabes</h3>
+      <div className="result">
+        {props.results.length && (
+          <div className="allgrids">
+            {props.results.map((e) => (
+              <div key={e.id} className="card" style={{ width: "18rem" }}>
+                <div>
+                  {e.photos[0] ? (
+                    <Link to={"/Featured/" + e.id}>
+                      <img
+                        className="card-img-top"
+                        src={e.photos[0] && e.photos[0].large}
+                      />
+                    </Link>
+                  ) : (
+                    <Link to={"/Featured/" + e.id}>
+                      <img className="card-img-top" src={icon} />
+                    </Link>
+                  )}
+                </div>
+                <div className="card-body">
+                  <h3 className="card-title">{e.name}</h3>
+                  <h6 className="card-text">{e.breeds.primary}</h6>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

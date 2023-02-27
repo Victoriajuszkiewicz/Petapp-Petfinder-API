@@ -1,0 +1,47 @@
+.resultsall {
+  background-color: #ffad10;
+  margin: 0 auto;
+  padding: 0;
+}
+.result {
+  width: 800px;
+}
+.allgrids {
+  display: grid;
+  gap: 10px;
+  text-align: center;
+  padding-left: 170px;
+  margin-left: 0;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.card {
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  align-items: center;
+  justify-content: center;
+  background: #fce8ca;
+}
+
+.card-img-top {
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  /* transition: 0.5s ease; */
+  /* backface-visibility: hidden; */
+  width: 100%;
+}
+
+.card-img-top :hover {
+  padding: 7px;
+  cursor: pointer;
+}
+div h3 {
+  font-weight: bold;
+}
+.avil {
+  padding-top: 10px;
+  font-size: 50px;
+}

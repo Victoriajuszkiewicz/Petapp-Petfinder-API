@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import icon from "../icon2.png";
+import "./Featured.css";
 
 export default function Featured(props) {
   // This function is called only when picture of pet is clicked
@@ -12,7 +13,6 @@ export default function Featured(props) {
 
   return (
     <div className="Featured">
-      <h2>This is featured page</h2>
       <div>
         {featProject.photos[0] ? (
           <img
@@ -35,12 +35,18 @@ export default function Featured(props) {
         )}
       </div>
       <div className="two-text">
-        <h2>{featProject.name}</h2>
-        <h3>{featProject.gender}</h3>
-        <h3>{featProject.primary}</h3>
-        <h3>{featProject.age}</h3>
+        <h3>Hello my name is {featProject.name}</h3>
+        <h4>Sex: {featProject.gender}</h4>
+        <h4>Breed: {featProject.primary}</h4>
+        <h4>Age: {featProject.age}</h4>
+        <h4>Coat: {featProject.coat}</h4>
+        <p>I am: {featProject.tags[0]}</p>
         <p>{featProject.description}</p>
       </div>
+      <p className="question">
+        Could you be {featProject.name}'s perfect match?
+      </p>
+      <button className="coulyou">Enquire about {featProject.name}</button>
     </div>
   );
 }
