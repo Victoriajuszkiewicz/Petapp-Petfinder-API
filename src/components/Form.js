@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import image from "../img2.jpg";
 import "./Form.css";
 
 export default function Form(props) {
