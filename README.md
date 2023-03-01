@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Petfinder app (MVP project/solo project)🐕
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pet Finder Project was created as solo project for Codeop Bootcamp. 
 
 ## Available Scripts
 
