@@ -16,7 +16,6 @@ export default function Form(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //let { location, type } =
     let formDetails = form;
     props.printPets(formDetails);
     //console.log(formDetails);

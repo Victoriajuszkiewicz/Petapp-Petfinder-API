@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-//import { Link, Outlet } from "react-router-dom";
 import icon from "../icon2.png";
 import { Link } from "react-router-dom";
-
 import "./Result.css";
 
 export default function Result(props) {
   const [featProject, setFeatured] = useState({});
 
   function showPet(id) {
-    //console.log("Result show pet", id);
     // once clicked on picture of the dog
     //it shows Featured page with more details
     let featProj = props.results.find((o) => o.id === id);
-    //featProj shows more details about clicked id pet!!! it's an obj
     console.log(featProj);
     setFeatured(featProj);
   }

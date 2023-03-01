@@ -6,8 +6,6 @@ import "./Featured.css";
 export default function Featured(props) {
   // This function is called only when picture of pet is clicked
   //Featured page is shown AFTER click
-  //it should show picture,breeds.primary, age,gender,name,description
-  // console.log(featProject);
   let { id } = useParams();
   let featProject = props.results.find((p) => p.id === +id);
 
@@ -24,7 +22,6 @@ export default function Featured(props) {
         ) : (
           <img
             src={icon}
-            //added key
             key={featProject.id}
             onClick={(o) => props.showPet(featProject.id)}
             style={{
@@ -46,6 +43,7 @@ export default function Featured(props) {
       <p className="question">
         Could you be {featProject.name}'s perfect match?
       </p>
+      {/* this button has no functionality but it could have shown form for adoption maybe  */}
       <button className="coulyou">Enquire about {featProject.name}</button>
     </div>
   );

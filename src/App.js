@@ -6,7 +6,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import { useEffect, createContext } from "react";
 import Form from "./components/Form";
 import { Button } from "react-bootstrap";
-import sorry from "./sorry.png";
 import logo from "./logo.png";
 
 function App() {
@@ -22,15 +21,12 @@ function App() {
     getToken();
   }, []);
 
-  // Get token from petfinder.com and save in state
   async function getToken() {
-    //console.log(process.env.REACT_APP_CLIENT_ID);
     let credentials = {
       grant_type: "client_credentials",
       client_id: process.env.REACT_APP_CLIENT_ID,
       client_secret: process.env.REACT_APP_CLIENT_SECRET,
     };
-    // add process.env.  before CLIENT ID to reach env folder
 
     let options = {
       method: "POST",
@@ -56,20 +52,13 @@ function App() {
     };
     setLoading(true);
     setError("");
-
-    //console.log(PET_TYPE);
     const PET_TYPE = `/v2/animals?type=${form.type}`;
     let response = await fetch(PET_TYPE, options);
 
-    //changed to PET_TYPE from PET URL
     if (response.ok) {
       let data = await response.json();
       //console.log("response:all pets", data.animals);
       setResults(data.animals);
-
-      // for (let pet of data.animals) {
-      //   console.log(pet.name, pet.breeds, pet.age, pet.gender, pet.type);
-      // }
     } else {
       setError(
         `No ${form.type} found. ${response.status}: ${response.statusText}`
@@ -85,7 +74,7 @@ function App() {
         <div>
           <nav>
             <img src={logo} alt="this is a logo" />
-
+            {/* These are fake buttons with no functionality */}
             <button>About us</button>
             <button>Pet Care</button>
             <button>Ways to support</button>
@@ -116,18 +105,4 @@ function App() {
   );
 }
 
-/*
-    src={sorry}
-              style={{
-                height: 400,
-                width: 500,
-              }}
-
-<h2 style={{ color: "red" }}>
-*/
 export default App;
-/*
-  {/* <Route
-              path="/Result/Featured/:id"
-              element={<Featured showPet={showPet} featProject={featProject} />}
-            /> */
