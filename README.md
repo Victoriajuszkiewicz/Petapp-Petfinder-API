@@ -2,6 +2,8 @@
 
 Pet Finder Project was created as solo project for Codeop Bootcamp. 
 
+READ THE OTHER README FOR MORE DETAILS!
+
 ## Available Scripts
 
 In the project directory, you can run:
