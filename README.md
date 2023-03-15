@@ -40,7 +40,7 @@ REACT_APP_CLIENT_ID = ....
 REACT_APP_CLIENT_SECRET = ....
 
 ## Petapp page
-
+<img align="right" alt="webdev" width="400" src="/1.png">
 ![petapp](/1.png)
 ![petapp](/2.png)
 ![petapp](/3.png)
