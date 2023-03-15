@@ -38,3 +38,9 @@ Mine are:
 PETFINDER_URL= `https://api.petfinder.com/v2/oauth2/animals`
 REACT_APP_CLIENT_ID = ....
 REACT_APP_CLIENT_SECRET = ....
+
+## Petapp page
+
+![petapp](/1.png)
+![petapp](/2.png)
+![petapp](/3.png)
