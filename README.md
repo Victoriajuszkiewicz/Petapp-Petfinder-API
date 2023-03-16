@@ -34,10 +34,13 @@ Log in for users + being able to add pet to favourites
 
 You won't have .env file so you need to create you own env.
 
-Mine are:
+What to include in .env:
 PETFINDER_URL= `https://api.petfinder.com/v2/oauth2/animals`
 REACT_APP_CLIENT_ID = ....
 REACT_APP_CLIENT_SECRET = ....
 
 ## Petapp page
 
+![homepage.petapp](./img/1.png)
+![resultview.petapp](./img/2.png)
+![fetured.petapp](./img/3.png)
