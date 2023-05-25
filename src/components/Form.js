@@ -89,8 +89,10 @@ export default function Form(props) {
 						</div>
 					</div>
 				</div>
-				<Benefits></Benefits>
-				<Footer></Footer>
+				<div>
+					<Benefits></Benefits>
+					<Footer></Footer>
+				</div>
 			</form>
 		</div>
 	);

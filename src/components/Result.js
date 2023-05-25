@@ -1,19 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 import icon from "../images/icon2.png";
 import { Link } from "react-router-dom";
 import "./Result.css";
 
 export default function Result(props) {
-	const [featProject, setFeatured] = useState({});
-
-	function showPet(id) {
-		// once clicked on picture of the dog
-		//it shows Featured page with more details
-		let featProj = props.results.find((o) => o.id === id);
-		console.log(featProj);
-		setFeatured(featProj);
-	}
+	// const [featProject, setFeatured] = useState({});
 
 	return (
 		<div className="resultsall">
@@ -33,13 +25,17 @@ export default function Result(props) {
 											<Link to={"/Featured/" + e.id}>
 												<img
 													className="card-img-top"
-													alt="pet"
+													alt="this is a pet"
 													src={e.photos[0] && e.photos[0].large}
 												/>
 											</Link>
 										) : (
 											<Link to={"/Featured/" + e.id}>
-												<img className="card-img-top" src={icon} alt="icon" />
+												<img
+													className="card-img-top"
+													src={icon}
+													alt="this is an icon"
+												/>
 											</Link>
 										)}
 									</div>

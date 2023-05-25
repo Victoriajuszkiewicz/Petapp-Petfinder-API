@@ -1,6 +1,6 @@
 import React from "react";
 import "./Aboutus.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 //pictures
 import catpic from "../images/catpic.jpg";
@@ -30,33 +30,17 @@ function Aboutus() {
 						</p>
 					</div>
 					<div className="col">
-						<img
-							src={catpic}
-							alt="picture of a cute cat"
-							className="picturecat"
-						/>
+						<img src={catpic} alt=" cute cat" className="picturecat" />
 					</div>
 					<div className="col">
-						<img
-							src={dogpic}
-							alt="picture of a cute dog"
-							className="picturecat"
-						/>
+						<img src={dogpic} alt=" a cute dog" className="picturecat" />
 					</div>
 					<div className="col">
-						<img
-							src={dogpic2}
-							alt="picture of a cute dog"
-							className="picturecat"
-						/>
+						<img src={dogpic2} alt="cute dog" className="picturecat" />
 					</div>
 					<div className="row" id="aboutusall">
 						<div className="col">
-							<img
-								src={pig}
-								alt="picture of a cute dog"
-								className="picturepig"
-							/>
+							<img src={pig} alt=" cute dog" className="picturepig" />
 						</div>
 
 						<div className="col">

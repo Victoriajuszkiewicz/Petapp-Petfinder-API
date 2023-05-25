@@ -1,11 +1,9 @@
 import React from "react";
 import logo from "../images/logodog.png";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
-	const navigate = useNavigate();
-
 	return (
 		<div>
 			<nav className="navbar  navbar-expand navbar-light" id="mainnavbar">

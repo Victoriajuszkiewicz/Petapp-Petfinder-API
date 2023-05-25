@@ -20,7 +20,10 @@
 	justify-content: center;
 	background: #fce8ca;
 }
-
+.card:hover {
+	transition: transform 125ms;
+	transform: translateY(-10px);
+}
 .card-img-top {
 	aspect-ratio: 1 / 1;
 	cursor: pointer;

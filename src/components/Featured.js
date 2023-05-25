@@ -18,12 +18,14 @@ export default function Featured(props) {
 						src={featProject.photos[0].medium}
 						//featProject.photos[0] &&
 						key={featProject.id}
+						alt="this is a pet"
 						onClick={(o) => featProject.showPet(featProject.id)}
 					/>
 				) : (
 					<img
 						src={icon}
 						key={featProject.id}
+						alt="this is a pet"
 						onClick={(o) => props.showPet(featProject.id)}
 						style={{
 							height: 200,
@@ -32,13 +34,14 @@ export default function Featured(props) {
 					/>
 				)}
 			</div>
-			<div className="two-text">
+			<div className="two-text" key={featProject.id}>
 				<h3>Hello my name is {featProject.name}</h3>
-				<h4>Sex: {featProject.gender}</h4>
-				<h4>Breed: {featProject.primary}</h4>
-				<h4>Age: {featProject.age}</h4>
-				<h4>Coat: {featProject.coat}</h4>
-				<p>I am: {featProject.tags[0]}</p>
+				{featProject.gender ? <h4>Sex: {featProject.gender}</h4> : null}
+				{featProject.primary ? <h4>Breed: {featProject.primary}</h4> : null}
+				{featProject.age ? <h4>Age: {featProject.age}</h4> : null}
+				{featProject.coat ? <h4>Coat: {featProject.coat}</h4> : null}
+				{featProject.tags[0] ? <p>I am: {featProject.tags[0]}</p> : null}
+
 				<p>{featProject.description}</p>
 			</div>
 			<p className="question">
