@@ -75,29 +75,3 @@ form {
 		transform: rotate(360deg);
 	}
 }
-
-nav {
-	background-color: white;
-	display: flex;
-	gap: 5px;
-	justify-content: space-evenly;
-}
-
-nav button {
-	height: 50px;
-	text-align: centre;
-	border: 0px;
-	background: 0px;
-	margin-top: 10px;
-	width: 250px;
-}
-
-nav button:hover {
-	background-color: #ffad10;
-}
-nav img {
-	width: 60px;
-	height: 60px;
-	padding-top: 5px;
-	margin-top: 5px;
-}

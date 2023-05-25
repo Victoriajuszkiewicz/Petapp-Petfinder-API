@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import { NavLink } from "react-router-dom";
+
 // components
 import Result from "./components/Result";
 import Featured from "./components/Featured";
@@ -9,10 +9,11 @@ import Aboutus from "./components/Aboutus.js";
 import Petcare from "./components/Petcare.js";
 import Allpets from "./components/Allpets.js";
 import Contact from "./components/Contact.js";
+import NavBar from "./components/NavBar.js";
 
 import { Routes, Route, Link } from "react-router-dom";
 import { useEffect, createContext } from "react";
-import logo from "./images/logo.png";
+
 
 function App() {
 	const [error, setError] = useState("");
@@ -75,27 +76,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<section>
-				<div>
-					<nav>
-						<NavLink to="/">
-							<img src={logo} alt="this is a logo" />
-						</NavLink>
-						<NavLink to="/Aboutus">
-							<button>About us</button>
-						</NavLink>
-						<NavLink to="/Petcare">
-							<button>Pet Care</button>
-						</NavLink>
-						<NavLink to="/Allpets">
-							<button>All pets</button>
-						</NavLink>
-						<NavLink to="/Contact">
-							<button>Contact us</button>
-						</NavLink>
-					</nav>
-				</div>
-			</section>
+			<NavBar></NavBar>
 			<section className="home">
 				<div>
 					<Routes>
