@@ -1,41 +1,48 @@
 ## 1. This project is called PETFINDER
 
-Petfinder is an app that connects pets with their future owners. People can search by location, gender or breed and rescue a life companion.
-Find your new best friend
-Browse pets of over 11,500 shelters and rescues.
+Petfinder is an app designed to connect pets with their future owners. It provides a platform for people to search for pets based on location, gender, and breed, allowing them to find and rescue a life companion. With Petfinder, you can browse through thousands of pets available for adoption from over 11,500 shelters and rescues.
 
 ## 2. Project Description
 
-This project focused on connecting API and displaying and searching tru pets in easy way.
-This project doesn't have other database than external API.
+The main objective of this project is to develop an application that connects to an external API and provides a user-friendly interface for displaying and searching pets. The project utilizes JavaScript (JS), React, Bootstrap, CSS, HTML, and Postman. It does not require any additional database, as it relies solely on the external API for data storage and retrieval.
 
-Technologies used: JS, React, bootstrap, css, html, postman.
+## Technologies Used
 
-API used : Petfinder API
-API documentation: https://www.petfinder.com/developers/v2/docs/
-For this API you'll need a token that expires!
-But in App.js lines 24-47 takes care of it.
+- JavaScript (JS)
+- React js
+- Bootstrap
+- CSS
+- HTML
+- Postman
 
-## 3. Pages
+## API
 
-The website is devided by few components: Main(App.js), form, Result, Featured.
+The project utilizes the Petfinder API for retrieving pet data. You can refer to the Petfinder API documentation for detailed information on the API's endpoints, parameters, and responses. Please note that the API requires a token that expires. However, the project's App.js file (lines 24-47) handles the token management.
 
-## Run npm install to install all needed things (when you're in MVP/petapp folder)
+LINK: https://www.petfinder.com/developers/
+
+## Installation
+
+To install the necessary dependencies, navigate to the MVP/petapp folder and run the following command:
+
+### npm install
 
 ### Run npm start for localhost:3000
 
-## 4. Possible future features:
+## Possible future features
 
-Adoption form
-Mini test to see what pet will match you
-Log in for users + being able to add pet to favourites
+The project has the potential for further enhancements and additional features, including:
+
+- Adoption form: Provide an adoption application form for users interested in adopting a pet.
+- Mini test: Incorporate a questionnaire or quiz to help users find a pet that matches their preferences.
+- User login: Implement user authentication and allow users to add pets to their favorites or create personalized profiles.
 
 ## IMPORTANT create your own .env
 
 You won't have .env file so you need to create you own env.
 
 What to include in .env:
-PETFINDER_URL= `https://api.petfinder.com/v2/oauth2/animals`
+PETFINDER_URL= ....
 REACT_APP_CLIENT_ID = ....
 REACT_APP_CLIENT_SECRET = ....
 
