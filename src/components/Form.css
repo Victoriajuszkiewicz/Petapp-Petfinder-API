@@ -12,7 +12,7 @@ form {
 }
 
 .background {
-	background-image: url(/src/img2.jpg);
+	background-image: url(/src/images/img2.jpg);
 	/* position: fixed; */
 	background-size: cover;
 	background-position: center;

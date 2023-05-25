@@ -1,108 +1,103 @@
 .App {
-  text-align: center;
-  box-sizing: border-box;
+	text-align: center;
+	box-sizing: border-box;
 }
 
 .searchimg {
-  position: relative;
-  margin: auto;
-  max-width: 100%;
-  margin-bottom: 0;
-  border-bottom: 0;
-  padding-bottom: 0;
-  width: 100%;
+	position: relative;
+	margin: auto;
+	max-width: 100%;
+	margin-bottom: 0;
+	border-bottom: 0;
+	padding-bottom: 0;
+	width: 100%;
 }
 
 .home {
-  background-color: #ffad10;
+	background-color: #ffad10;
 }
 .bcg-sorry {
-  background-image: url(/src/sorry.png);
-  position: fixed;
-  background-size: cover;
-  background-position: center;
-  min-width: 100%;
-  min-height: 100%;
-  background-blend-mode: multiply;
+	background-image: url(/src/images/sorry.png);
+	position: fixed;
+	background-size: cover;
+	background-position: center;
+	min-width: 100%;
+	min-height: 100%;
+	background-blend-mode: multiply;
 }
-/*
- left: 10px;
-  right: 10px;
-  bottom: 0;
-  top: 0;
-*/
+
 .reasonsgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 30px;
-  padding-left: 40px;
-  padding-right: 40px;
-  grid-gap: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	padding: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+	grid-gap: 40px;
 }
 
 form {
-  color: #f2f2f2;
-  position: absolute;
-  margin-top: 30px;
-  padding-top: 30px;
+	color: #f2f2f2;
+	position: absolute;
+	margin-top: 30px;
+	padding-top: 30px;
 }
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
 nav {
-  background-color: white;
-  display: flex;
-  gap: 5px;
-  justify-content: space-evenly;
+	background-color: white;
+	display: flex;
+	gap: 5px;
+	justify-content: space-evenly;
 }
 
 nav button {
-  height: 50px;
-  text-align: centre;
-  border: 0px;
-  background: 0px;
-  margin-top: 10px;
-  width: 250px;
+	height: 50px;
+	text-align: centre;
+	border: 0px;
+	background: 0px;
+	margin-top: 10px;
+	width: 250px;
 }
 
 nav button:hover {
-  background-color: #ffad10;
+	background-color: #ffad10;
 }
 nav img {
-  width: 60px;
-  height: 60px;
-  padding-top: 5px;
-  margin-top: 5px;
+	width: 60px;
+	height: 60px;
+	padding-top: 5px;
+	margin-top: 5px;
 }

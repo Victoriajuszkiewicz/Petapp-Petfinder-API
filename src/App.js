@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { NavLink } from "react-router-dom";
-
+// components
 import Result from "./components/Result";
 import Featured from "./components/Featured";
 import Form from "./components/Form";
@@ -12,7 +12,6 @@ import Contact from "./components/Contact.js";
 
 import { Routes, Route, Link } from "react-router-dom";
 import { useEffect, createContext } from "react";
-import { Button } from "react-bootstrap";
 import logo from "./images/logo.png";
 
 function App() {
@@ -27,7 +26,7 @@ function App() {
 	useEffect(() => {
 		getToken();
 	}, []);
-
+	// needed so we can use more than 60min it asks about token automatically
 	async function getToken() {
 		let credentials = {
 			grant_type: "client_credentials",
