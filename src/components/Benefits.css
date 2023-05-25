@@ -1,0 +1,25 @@
+.whybox {
+	position: absolute;
+	background-color: rgb(180, 50, 50);
+	z-index: 1;
+}
+.whytext {
+	font-size: 25px;
+	font-weight: bold;
+	margin: 0px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	margin-left: 0;
+	padding-left: 0;
+	font-size: 40px;
+}
+.reasons {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	padding: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+	grid-gap: 40px;
+}

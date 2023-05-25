@@ -11,9 +11,8 @@ import Allpets from "./components/Allpets.js";
 import Contact from "./components/Contact.js";
 import NavBar from "./components/NavBar.js";
 
-import { Routes, Route, Link } from "react-router-dom";
-import { useEffect, createContext } from "react";
-
+import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 
 function App() {
 	const [error, setError] = useState("");
@@ -21,7 +20,7 @@ function App() {
 	const [token, setToken] = useState(null);
 
 	const OAUTH_URL = "https://api.petfinder.com/v2/oauth2/token";
-	const PETFINDER_URL = `/v2/animals`;
+	// const PETFINDER_URL = `/v2/animals`;
 
 	const [loading, setLoading] = useState(false);
 	useEffect(() => {
