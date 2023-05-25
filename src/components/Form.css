@@ -13,7 +13,7 @@ form {
 }
 
 .background {
-	background-image: url(/src/images/img2.jpg);
+	background-image: url(../images/img2.jpg);
 	/* position: fixed; */
 	background-size: cover;
 	background-position: center;
@@ -42,7 +42,6 @@ div h2 {
 	font-size: 30px;
 	text-align: left;
 }
-
 
 .footer {
 	position: absolute;
