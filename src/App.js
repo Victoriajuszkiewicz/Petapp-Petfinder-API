@@ -58,7 +58,7 @@ function App() {
 		};
 		setLoading(true);
 		setError("");
-		const PET_TYPE = `/v2/animals?type=${form.type}`;
+		const PET_TYPE = `https://api.petfinder.com/v2/animals?type=${form.type}`;
 		let response = await fetch(PET_TYPE, options);
 
 		if (response.ok) {
