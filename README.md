@@ -8,7 +8,7 @@ The main objective of this project is to develop an application that connects to
 
 Website was speeded up by image optimazation (11.03.2024).
 
-Fixed  Issue related to the OpenSSL library while trying to start your React application. The error message suggests that there is an "unsupported" digital envelope routines initialization error. (11.03.2024)
+NOT Fixed  Issue related to the OpenSSL library while trying to start your React application. The error message suggests that there is an "unsupported" digital envelope routines initialization error. (11.03.2024)
 
 ## Technologies Used
 
