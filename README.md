@@ -6,6 +6,10 @@ Petfinder is an app designed to connect pets with their future owners. It provid
 
 The main objective of this project is to develop an application that connects to an external API and provides a user-friendly interface for displaying and searching pets. The project utilizes JavaScript (JS), React, Bootstrap, CSS, HTML, and Postman. It does not require any additional database, as it relies solely on the external API for data storage and retrieval.
 
+Website was speeded up by image optimazation (11.03.2024).
+
+Fixed  Issue related to the OpenSSL library while trying to start your React application. The error message suggests that there is an "unsupported" digital envelope routines initialization error. (11.03.2024)
+
 ## Technologies Used
 
 - JavaScript (JS)
@@ -48,6 +52,6 @@ REACT_APP_CLIENT_SECRET = ....
 
 ## Petapp page
 
-![homepage.petapp](./img/1.png)
-![resultview.petapp](./img/2.png)
-![fetured.petapp](./img/3.png)
+![homepage.petapp](.public/img/1.png)
+![resultview.petapp](.public/img/2.png)
+![fetured.petapp](.public/img/3.png)
