@@ -52,6 +52,6 @@ REACT_APP_CLIENT_SECRET = ....
 
 ## Petapp page
 
-![homepage.petapp](.public/img/1.png)
-![resultview.petapp](.public/img/2.png)
-![fetured.petapp](.public/img/3.png)
+![homepage.petapp](./img/1.png)
+![resultview.petapp](./img/2.png)
+![fetured.petapp](./img/3.png)
