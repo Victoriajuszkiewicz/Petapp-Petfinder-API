@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import catpic from "../images/catpic.jpeg";
 import dogpic from "../images/dogpic.jpeg";
 import dogpic2 from "../images/dog2.jpeg";
-import pig from "../images/pig.jpg";
+import pig from "../images/pig.jpeg";
 
 function Aboutus() {
 	return (

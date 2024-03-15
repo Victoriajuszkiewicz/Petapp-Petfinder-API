@@ -22,10 +22,10 @@ const Footer = () => {
 					</div>
 
 					<div className="text-center p-3">
-						© 2020 Copyright:
+						© 2024 Copyright:
 						<a
 							className="text-white"
-							href="mailto:victoria.fullstackdeveloper@gmail.com"
+							href="https://main--vj-webdev-portfolio.netlify.app/"
 						>
 							{" "}
 							Victoria Juszkiewicz
