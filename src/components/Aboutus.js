@@ -3,9 +3,9 @@ import "./Aboutus.css";
 import { NavLink } from "react-router-dom";
 
 //pictures
-import catpic from "../images/catpic.jpg";
-import dogpic from "../images/dogpic.jpg";
-import dogpic2 from "../images/dog2.jpg";
+import catpic from "../images/catpic.jpeg";
+import dogpic from "../images/dogpic.jpeg";
+import dogpic2 from "../images/dog2.jpeg";
 import pig from "../images/pig.jpg";
 
 function Aboutus() {
