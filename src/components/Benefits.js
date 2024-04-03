@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Benefits.css";
+import { gsap } from "gsap";
+
+
 
 const Benefits = () => {
+	// gsap.registerPlugin(SplitText) 
+
+	const textRef = useRef(null);
+
+
 	return (
 		<div>
 			<div className="whybox">
-				<h2 className="whytext">The benefits of adopting</h2>
+				<setion>
+					<div ref={textRef}>
+					<h2 className="whytext">The benefits of adopting</h2>
+					</div>
+				</setion>
+				
 				<div className="reasons">
 					<div>
 						<h4>We’ll help you find the perfect match</h4>

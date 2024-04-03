@@ -8,3 +8,14 @@ nav img {
 	margin: 5px 10px 5px 20px;
 	background-image: none;
 }
+
+.nav-button {
+    text-decoration: none;
+    position: relative;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.2);
+}

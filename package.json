@@ -2,7 +2,7 @@
   "name": "petapp",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://api.petfinder.com",
+  "proxy": "https://api.petfinder.com",
   "Content-Type": "application/x-www-form-urlencoded",
   "dependencies": {
     "@hapi/hoek": "^11.0.4",
@@ -13,6 +13,7 @@
     "bootstrap-icons": "^1.10.5",
     "cors": "^2.8.5",
     "css-select": "^5.1.0",
+    "dotenv": "^16.4.5",
     "gsap": "^3.12.5",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
