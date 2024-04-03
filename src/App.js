@@ -32,7 +32,7 @@ function App() {
 	}, []);
 	// needed so we can use more than 60min for token,  it asks about token automatically
 	async function getToken() {
-		console.log(process.env.REACT_APP_CLIENT_ID + "Secret" + process.env.REACT_APP_CLIENT_SECRET);
+	
 		let credentials = {
 			grant_type: "client_credentials",
 			client_id: process.env.REACT_APP_CLIENT_ID,
@@ -49,10 +49,10 @@ function App() {
 		try {
 			setLoading(true);
 			const response = await fetch(OAUTH_URL, options);
-			console.log(OAUTH_URL, options);
+			
 			if (response.ok) {
 				const data = await response.json();
-				console.log("Response:", data);
+				
 				setToken(data.access_token);
 			} else {
 				console.log(
@@ -72,9 +72,7 @@ function App() {
 		};
 		setLoading(true);
 		setError("");
-		console.log(form.type);
-		console.log(process.env.REACT_APP_CLIENT_ID);
-		console.log(process.env.REACT_APP_CLIENT_SECRET);
+	
 		const PET_TYPE = `https://api.petfinder.com/v2/animals?type=${form.type}`;
 		let response = await fetch(PET_TYPE, options);
 
