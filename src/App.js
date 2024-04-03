@@ -75,7 +75,7 @@ function App() {
 	
 		const PET_TYPE = `https://api.petfinder.com/v2/animals?type=${form.type}`;
 		let response = await fetch(PET_TYPE, options);
-
+console.log(response);
 		try {
 			// Fetch pet data from the Petfinder API
 			let response = await fetch(PET_TYPE, options);
