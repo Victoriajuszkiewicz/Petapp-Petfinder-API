@@ -15,6 +15,7 @@
 
 .home {
 	background-color: #ffad10;
+	min-height: 100vh;
 }
 .bcg-sorry {
 	background-image: url(/src/images/sorry.png);

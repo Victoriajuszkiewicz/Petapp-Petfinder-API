@@ -4,6 +4,7 @@ import "./Form.css";
 
 // components
 import Benefits from "./Benefits.js";
+
 import Footer from "./Footer.js";
 
 export default function Form(props) {
@@ -91,6 +92,7 @@ export default function Form(props) {
 				</div>
 				<div>
 					<Benefits></Benefits>
+					
 					<Footer></Footer>
 				</div>
 			</form>
